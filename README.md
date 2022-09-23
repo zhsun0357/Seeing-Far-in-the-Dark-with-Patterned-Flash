@@ -55,11 +55,9 @@ for patterned flash reconstruction model training or
         
 for patterned flash/no-flash reconstruction model training
     
-after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
-You can easily change hyper-parameters and input/output file directories in "config.ini"
+The whole training process has around 200k iters and would take around 36hrs on Nvidia Tesla V100 GPU (16GB).
+You can easily change hyper-parameters and input/output file directories in the json files
 
-We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB).
-
-[NYUV2]: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
-
+We also provide a pre-trained [checkpoint of patterned flash reconstruction model]
+[checkpoint of patterned flash reconstruction model]: https://zhsun0357.github.io/
 
