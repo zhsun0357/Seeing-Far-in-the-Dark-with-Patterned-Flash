@@ -58,6 +58,7 @@ for patterned flash/no-flash reconstruction model training
 The whole training process has around 200k iters and would take around 36hrs on Nvidia Tesla V100 GPU (16GB).
 You can easily change hyper-parameters and input/output file directories in the json files
 
-We also provide a pre-trained [checkpoint of patterned flash reconstruction model]
+We also provide a pre-trained [checkpoint of patterned flash reconstruction model].
+
 [checkpoint of patterned flash reconstruction model]: https://zhsun0357.github.io/
 
