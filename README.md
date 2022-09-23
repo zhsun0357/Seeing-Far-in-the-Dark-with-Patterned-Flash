@@ -1,14 +1,16 @@
 # Seeing-Far-in-the-Dark-with-Patterned-Flash
 Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with Patterned Flash]" (ECCV 2022)
 
-[Seeing Far in the Dark with Patterned Flash]: https://arxiv.org/pdf/2207.12570.pdf
-
 [Zhanghao Sun], [Jian Wang], [Yicheng Wu], [Shree Nayar].
 
+## [Poster], [Video], [Supplementary Material]
+
+[Seeing Far in the Dark with Patterned Flash]: https://arxiv.org/pdf/2207.12570.pdf
 [Zhanghao Sun]: https://zhsun0357.github.io/
 [Jian Wang]: https://jianwang-cmu.github.io/
 [Yicheng Wu]: https://yichengwu.github.io/
 [Shree Nayar]: http://www.cs.columbia.edu/~nayar/
+[Poster]: 
 
 ## Introduction
 This repository is code release for our Optics Express paper "SPADnet: Deep RGB-SPAD Sensor Fusion Assisted by Monocular Depth Estimation". 
