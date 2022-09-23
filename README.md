@@ -45,22 +45,19 @@ After downloading the [FlyingThings3D] dataset, please organize it as follows:
 ```
 ROOT
 |
---- frames_cleanpass                             # color image folder
+--- frames_cleanpass                    # color image folder
 |       |
-|       ---- TRAIN                          # training set
+|       ---- TRAIN                      # training set
 |       |      |
 |       |      ---- A                   # subset
 |       |      |      |
-|       |      |      +--- 0000      # scene
+|       |      |      +--- 0000         # scene
 |       |      |      .
 |       |      |      .
 |       |      |
-|       |      |  
-|       |      +--- P001
+|       |      +--- B
 |       |      .
 |       |      .
-|       |      |
-|       |      +--- P00K
 |       |
 |       +--- Hard
 |
