@@ -3,11 +3,12 @@ Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with
 
 [Seeing Far in the Dark with Patterned Flash]: https://arxiv.org/pdf/2207.12570.pdf
 
+[Zhanghao Sun], [Jian Wang], [Yicheng Wu], [Shree Nayar].
 
-Created by Zhanghao Sun, David Brian Lindell, [Olav Solgaard] and [Gordon Wetzstein] from Stanford University.
-
-[Olav Solgaard]: https://solgaardlab.stanford.edu/#research
-[Gordon Wetzstein]: http://www.computationalimaging.org
+[Zhanghao Sun]: https://zhsun0357.github.io/
+[Jian Wang]: https://jianwang-cmu.github.io/
+[Yicheng Wu]: https://yichengwu.github.io/
+[Shree Nayar]: http://www.cs.columbia.edu/~nayar/
 
 ## Introduction
 This repository is code release for our Optics Express paper "SPADnet: Deep RGB-SPAD Sensor Fusion Assisted by Monocular Depth Estimation". 
