@@ -51,7 +51,7 @@ We provide our training scipts for both patterned flash reconstruction and patte
     
 for patterned flash reconstruction model training or 
 
-        python main_train_cnn_psnr_pattern_flash.py --opt options/train_fnf.json
+    python main_train_cnn_psnr_pattern_flash.py --opt options/train_fnf.json
         
 for patterned flash/no-flash reconstruction model training
     
