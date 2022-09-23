@@ -51,7 +51,9 @@ ROOT
 |       |      |
 |       |      ---- A                   # subset
 |       |      |      |
-|       |      |      +--- 0000         # scene
+|       |      |      ---- 0000         # scene
+|       |      |      |        +--- left         # left color image
+|       |      |      |        +--- right         # right color image
 |       |      |      .
 |       |      |      .
 |       |      |
@@ -59,9 +61,9 @@ ROOT
 |       |      .
 |       |      .
 |       |
-|       +--- Hard
+|       +--- TEST
 |
-+-- TEST
++-- disparity
 ```
 
 One can run the evaluation for synthetic data with 
