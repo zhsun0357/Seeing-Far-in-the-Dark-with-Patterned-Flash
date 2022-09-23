@@ -45,7 +45,7 @@ You can change hyper-parameters and input/output file directories in "val_config
 
 ## Training
 ### Model training
-We provide our training scipts for both patterned flash reconstruction and patterned flash/no-flash reconstruction. One can run training with:
+One can run training with:
     
     python main_train_cnn_psnr_pattern_flash.py --opt options/train_pf.json
     
