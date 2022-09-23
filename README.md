@@ -35,13 +35,14 @@ If you find our work useful in your research, please consider citing:
 We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can install our conda environment from "environment.yml".
 
 ## Evaluation
-### Simulated Dataset
-One can evaluate SPADnet model on simulated NYUV2 dataset by running:
-    
-    python evaluate_spadnet.py
+### Synthetic Dataset
+We use RGB image (left) and depth map in [FlyingThings3D] dataset for both evaluation and training. 
+We follow the image formation model in data synthesize process, including depth-dependent pattern warping and physics-based noise. We also notice that most current flash/no-flash reconstruction algorithms do not handle shadow correctly, since sharp shadow edges in no-flash images usually do not exist in flash images. We consider this effect with the stereo image pair provided by [FlyingThings3D] dataset.
 
-This will create a .json file that contains all metrices of evaluated model.
-You can change hyper-parameters and input/output file directories in "val_config.ini"
+### Real-world Captured Data
+We captured several images with our hardware prototype.
+
+[FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
 
 ## Training
 ### Model training
