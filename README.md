@@ -50,9 +50,9 @@ One can run the evaluation for real-world captured data with
 
      python eval_pattern_flash_real.py --opt options/eval_pf_real.json 
 
-We provide our pre-trained [checkpoint of patterned flash reconstruction model here].
+We provide our pre-trained [checkpoint] of patterned flash reconstruction model here.
 
-[checkpoint of patterned flash reconstruction model here]: https://zhsun0357.github.io/
+[checkpoint]: https://zhsun0357.github.io/
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
 
 ## Training
