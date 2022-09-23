@@ -39,8 +39,16 @@ We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can ins
 We use RGB image (left) and depth map in [FlyingThings3D] dataset for both evaluation and training. 
 We follow the image formation model in data synthesize process, including depth-dependent pattern warping and physics-based noise. We also notice that most current flash/no-flash reconstruction algorithms do not handle shadow correctly, since sharp shadow edges in no-flash images usually do not exist in flash images. We consider this effect with the stereo image pair provided by [FlyingThings3D] dataset.
 
+One can run the evaluation for synthetic data with 
+
+     python eval_pattern_flash.py --opt options/eval_pf.json 
+
 ### Real-world Captured Data
 We captured several images with our hardware prototype.
+
+One can run the evaluation for real-world captured data with
+
+     python eval_pattern_flash_real.py --opt options/eval_pf_real.json 
 
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
 
