@@ -52,8 +52,8 @@ ROOT
 |       |      ---- A                   # subset
 |       |      |      |
 |       |      |      ---- 0000         # scene
-|       |      |      |        +--- left         # left color image
-|       |      |      |        +--- right         # right color image
+|       |      |      |        +--- left         # left color images
+|       |      |      |        +--- right        # right color images
 |       |      |      .
 |       |      |      .
 |       |      |
@@ -62,6 +62,8 @@ ROOT
 |       |      .
 |       |
 |       +--- TEST
+|       |      |
+|       |      ---- A                   # subset
 |
 +-- disparity
 ```
