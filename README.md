@@ -64,8 +64,12 @@ ROOT
 |       +--- TEST
 |       |      |
 |       |      ---- A                   # subset
+|       |      .
+|       |      .
 |
 +-- disparity
+|       .
+|       .
 ```
 
 One can run the evaluation for synthetic data with 
