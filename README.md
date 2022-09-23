@@ -39,6 +39,43 @@ We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can ins
 We use RGB image (left) and depth map in [FlyingThings3D] dataset for both evaluation and training. 
 We follow the image formation model in data synthesize process, including depth-dependent pattern warping and physics-based noise. We also notice that most current flash/no-flash reconstruction algorithms do not handle shadow correctly, since sharp shadow edges in no-flash images usually do not exist in flash images. We consider this effect with the stereo image pair provided by [FlyingThings3D] dataset.
 
+After downloading the [FlyingThings3D] dataset, please organize it as follows:
+
+
+```
+ROOT
+|
+--- ENV_NAME_0                             # environment folder
+|       |
+|       ---- Easy                          # difficulty level
+|       |      |
+|       |      ---- P000                   # trajectory folder
+|       |      |      |
+|       |      |      +--- depth_left      # 000000_left_depth.npy - 000xxx_left_depth.npy
+|       |      |      +--- depth_right     # 000000_right_depth.npy - 000xxx_right_depth.npy
+|       |      |      +--- flow            # 000000_000001_flow/mask.npy - 000xxx_000xxx_flow/mask.npy
+|       |      |      +--- image_left      # 000000_left.png - 000xxx_left.png 
+|       |      |      +--- image_right     # 000000_right.png - 000xxx_right.png 
+|       |      |      +--- seg_left        # 000000_left_seg.npy - 000xxx_left_seg.npy
+|       |      |      +--- seg_right       # 000000_right_seg.npy - 000xxx_right_seg.npy
+|       |      |      ---- pose_left.txt 
+|       |      |      ---- pose_right.txt
+|       |      |  
+|       |      +--- P001
+|       |      .
+|       |      .
+|       |      |
+|       |      +--- P00K
+|       |
+|       +--- Hard
+|
++-- ENV_NAME_1
+.
+.
+|
++-- ENV_NAME_N
+```
+
 One can run the evaluation for synthetic data with 
 
      python eval_pattern_flash.py --opt options/eval_pf.json 
@@ -50,7 +87,7 @@ One can run the evaluation for real-world captured data with
 
      python eval_pattern_flash_real.py --opt options/eval_pf_real.json 
 
-We provide our pre-trained [checkpoint] of patterned flash reconstruction model here.
+We also provide our pre-trained [checkpoint] of patterned flash reconstruction model.
 
 [checkpoint]: https://zhsun0357.github.io/
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
