@@ -10,7 +10,9 @@ Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with
 [Jian Wang]: https://jianwang-cmu.github.io/
 [Yicheng Wu]: https://yichengwu.github.io/
 [Shree Nayar]: http://www.cs.columbia.edu/~nayar/
-[Poster]: 
+[Poster]: https://zhsun0357.github.io/data/2891.pdf
+[Video]: https://zhsun0357.github.io/data/2891.mp4
+[Supplementary Material]: https://jianwang-cmu.github.io/22patternedFlash/patteredFlash-supp.pdf
 
 ## Introduction
 This repository is code release for our Optics Express paper "SPADnet: Deep RGB-SPAD Sensor Fusion Assisted by Monocular Depth Estimation". 
