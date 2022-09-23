@@ -45,6 +45,9 @@ After downloading the [FlyingThings3D] dataset, please organize it as follows:
 ```
 ROOT
 |
+--- train_split.txt
+--- val_split.txt
+--- val_small_split.txt
 --- frames_cleanpass                    # color image folder
 |       |
 |       ---- TRAIN                      # training set
@@ -57,15 +60,10 @@ ROOT
 |       |      |      .
 |       |      |      .
 |       |      |
-|       |      +--- B
-|       |      .
-|       |      .
 |       |
 |       +--- TEST
 |       |      |
 |       |      ---- A                   # subset
-|       |      .
-|       |      .
 |
 +-- disparity
 |       .
