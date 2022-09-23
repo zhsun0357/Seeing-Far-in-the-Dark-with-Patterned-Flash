@@ -32,31 +32,7 @@ If you find our work useful in your research, please consider citing:
         }
 
 ## Installation
-We use Python 3.6 , Pytorch 1.0 and CUDA 9.0 for our experiments. One can install our conda environment from "environment.yml".
-
-## Training
-### Preparing data
-The data preparation process contains SPAD simualtion and corresponding monocular depth estimation. We use [NYUV2] dataset for SPAD measurement simulation. We select out data with high quality (without large holes in ground truth depth map, with reasonable reflectivity value and so on), which are separated into training set, validation set and test set (10:1:1). Corresponding scene index are listed in "util/train_clean.txt", "util/val_clean.txt" and "util/test_clean.txt".
-
-To simulate SPAD measurements, we adapted code from NYUV2 toolkit and code from [Lindell et al., 2018]. The signal-background ratio (SBR) needs to be specified for simulation. We always use the lowest SBR (level 9, which corresponds to 2 signal photons and 50 background photons) during experiments and observed good generalization capability to complicated real-world scenes.
-
-Our scripts directly load monocular estimation results. We use [DORN] model as monocular estimation network for most part of the work and [here] we provide corresponding estimation results. Users can replace them with any other preliminary depth estimations.
-
-[Lindell et al., 2018]: http://www.computationalimaging.org/publications/single-photon-3d-imaging-with-deep-sensor-fusion/
-[DORN]: https://openaccess.thecvf.com/content_cvpr_2018/html/Fu_Deep_Ordinal_Regression_CVPR_2018_paper.html
-[here]: https://drive.google.com/file/d/1bHpdTCIARwOazWa7Up3o31hrGDmwetj4/view?usp=sharing
-
-### Model training
-One can train SPADnet model from scratch by running:
-    
-    python train_spadnet.py
-    
-after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
-You can easily change hyper-parameters and input/output file directories in "config.ini"
-
-We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB).
-
-[NYUV2]: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
+We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can install our conda environment from "environment.yml".
 
 ## Evaluation
 ### Simulated Dataset
@@ -66,4 +42,24 @@ One can evaluate SPADnet model on simulated NYUV2 dataset by running:
 
 This will create a .json file that contains all metrices of evaluated model.
 You can change hyper-parameters and input/output file directories in "val_config.ini"
+
+## Training
+### Model training
+We provide our training scipts for both patterned flash reconstruction and patterned flash/no-flash reconstruction. One can run training with:
+    
+    python main_train_cnn_psnr_pattern_flash.py --opt options/train_pf.json
+    
+for patterned flash reconstruction model training or 
+
+        python main_train_cnn_psnr_pattern_flash.py --opt options/train_fnf.json
+        
+for patterned flash/no-flash reconstruction model training
+    
+after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
+You can easily change hyper-parameters and input/output file directories in "config.ini"
+
+We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB).
+
+[NYUV2]: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
+
 
