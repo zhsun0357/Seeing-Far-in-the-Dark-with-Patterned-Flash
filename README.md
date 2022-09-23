@@ -50,6 +50,9 @@ One can run the evaluation for real-world captured data with
 
      python eval_pattern_flash_real.py --opt options/eval_pf_real.json 
 
+We provide our pre-trained [checkpoint of patterned flash reconstruction model here].
+
+[checkpoint of patterned flash reconstruction model here]: https://zhsun0357.github.io/
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
 
 ## Training
@@ -65,9 +68,5 @@ for patterned flash reconstruction model training or
 for patterned flash/no-flash reconstruction model training
     
 The whole training process has around 200k iters and would take around 36hrs on Nvidia Tesla V100 GPU (16GB).
-You can easily change hyper-parameters and input/output file directories in the json files
-
-We also provide a pre-trained [checkpoint of patterned flash reconstruction model].
-
-[checkpoint of patterned flash reconstruction model]: https://zhsun0357.github.io/
+You can easily change hyper-parameters and input/output file directories in the json files.
 
