@@ -1,7 +1,7 @@
 # Seeing-Far-in-the-Dark-with-Patterned-Flash
 Code and data release for the ECCV 2022 manuscript "Seeing Far in the Dark with Patterned Flash"
 
-[Seeing-Far-in-the-Dark-with-Patterned-Flash]: https://arxiv.org/pdf/2207.12570.pdf
+[Seeing Far in the Dark with Patterned Flash]: https://arxiv.org/pdf/2207.12570.pdf
 
 
 Created by Zhanghao Sun, David Brian Lindell, [Olav Solgaard] and [Gordon Wetzstein] from Stanford University.
