@@ -37,6 +37,7 @@ We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can ins
 
 ## Evaluation
 Our code is adapted from the [KAIR] low-level computer vision library.
+We also provide our pre-trained [checkpoint] of patterned flash reconstruction model.
 
 [KAIR]: https://github.com/cszn/KAIR
 
@@ -80,7 +81,7 @@ One can run the evaluation for synthetic data with
 
      python eval_pattern_flash.py --opt options/eval_pf.json 
 
-#### Example Reconstruction Result
+#### Example Reconstruction Results
 <img src='fig/results_synth.png'>
 
 ### Real-world Captured Data
@@ -90,7 +91,8 @@ One can run the evaluation for real-world captured data with
 
      python eval_pattern_flash_real.py --opt options/eval_pf_real.json 
 
-We also provide our pre-trained [checkpoint] of patterned flash reconstruction model.
+#### Example Reconstruction Results
+<img src='fig/results_real.png'>
 
 [checkpoint]: https://zhsun0357.github.io/
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
