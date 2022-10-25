@@ -36,10 +36,7 @@ If you find our work useful in your research, please consider citing:
 We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can install our conda environment from "environment.yml".
 
 ## Evaluation
-Our code is adapted from the [KAIR] low-level computer vision library.
-We also provide our pre-trained [checkpoint] of patterned flash reconstruction model.
-
-[KAIR]: https://github.com/cszn/KAIR
+We provide our pre-trained [checkpoint] of patterned flash reconstruction model.
 
 ### Synthetic Dataset
 We use RGB image (left) and depth map in [FlyingThings3D] dataset for both evaluation and training. 
@@ -99,6 +96,10 @@ One can run the evaluation for real-world captured data with
 
 ## Training
 ### Model training
+Our code is adapted from the [KAIR] low-level computer vision library.
+
+[KAIR]: https://github.com/cszn/KAIR
+
 One can run training with:
     
     python main_train_cnn_psnr_pattern_flash.py --opt options/train_pf.json
