@@ -3,7 +3,7 @@ Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with
 
 [Zhanghao Sun], [Jian Wang], [Yicheng Wu], [Shree Nayar].
 
-## [Paper], [Poster], [Video], [Supplementary Material]
+## [Paper], [Poster], [Video], [Supplementary]
 
 [Seeing Far in the Dark with Patterned Flash]: https://arxiv.org/pdf/2207.12570.pdf
 [Zhanghao Sun]: https://zhsun0357.github.io/
@@ -13,7 +13,7 @@ Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with
 [Paper]: https://arxiv.org/pdf/2207.12570.pdf
 [Poster]: https://zhsun0357.github.io/data/2891.pdf
 [Video]: https://zhsun0357.github.io/data/2891.mp4
-[Supplementary Material]: https://jianwang-cmu.github.io/22patternedFlash/patteredFlash-supp.pdf
+[Supplementary]: https://jianwang-cmu.github.io/22patternedFlash/patteredFlash-supp.pdf
 
 ## Introduction
 This repository is code release for our ECCV 2022 paper "Seeing Far in the Dark with Patterned Flash". 
