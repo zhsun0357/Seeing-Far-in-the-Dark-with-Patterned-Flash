@@ -36,7 +36,8 @@ If you find our work useful in your research, please consider citing:
 We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can install our conda environment from "environment.yml".
 
 ## Evaluation
-Our code is adapted from the [KAIR] low-level computer vision library
+Our code is adapted from the [KAIR] low-level computer vision library.
+
 [KAIR]: https://github.com/cszn/KAIR
 
 ### Synthetic Dataset
