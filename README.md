@@ -37,7 +37,7 @@ We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can ins
 
 ## Evaluation
 Our code is adapted from the [KAIR] low-level computer vision library
-[kAIR]: https://github.com/cszn/KAIR
+[KAIR]: https://github.com/cszn/KAIR
 
 ### Synthetic Dataset
 We use RGB image (left) and depth map in [FlyingThings3D] dataset for both evaluation and training. 
