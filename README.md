@@ -74,19 +74,13 @@ ROOT
 |       .
 ```
 
-One can run the evaluation for synthetic data with 
-
-     python eval_pattern_flash.py --opt options/eval_pf.json 
+One can run the evaluation script in "eval_patterned_flash.ipynb" for quantitative and qualitative comparisons.
 
 #### Example Reconstruction Results
 <img src='figs/results_synth.png'>
 
 ### Real-world Captured Data
-We captured several images with our hardware prototype.
-
-One can run the evaluation for real-world captured data with
-
-     python eval_pattern_flash_real.py --opt options/eval_pf_real.json 
+We captured several images with our hardware prototype. One can also run the evaluation script in "eval_patterned_flash.ipynb" for real-world captured data.
 
 #### Example Reconstruction Results
 <img src='figs/results_real.png'>
