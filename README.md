@@ -79,7 +79,7 @@ One can run the evaluation for synthetic data with
      python eval_pattern_flash.py --opt options/eval_pf.json 
 
 #### Example Reconstruction Results
-<img src='fig/results_synth.png'>
+<img src='figs/results_synth.png'>
 
 ### Real-world Captured Data
 We captured several images with our hardware prototype.
@@ -89,7 +89,7 @@ One can run the evaluation for real-world captured data with
      python eval_pattern_flash_real.py --opt options/eval_pf_real.json 
 
 #### Example Reconstruction Results
-<img src='fig/results_real.png'>
+<img src='figs/results_real.png'>
 
 [checkpoint]: https://zhsun0357.github.io/
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
