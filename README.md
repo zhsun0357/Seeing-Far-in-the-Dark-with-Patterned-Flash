@@ -80,6 +80,9 @@ One can run the evaluation for synthetic data with
 
      python eval_pattern_flash.py --opt options/eval_pf.json 
 
+#### Example Reconstruction Result
+<img src='fig/results_synth.png'>
+
 ### Real-world Captured Data
 We captured several images with our hardware prototype.
 
