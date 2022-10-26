@@ -2,7 +2,8 @@
 Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with Patterned Flash]" (ECCV 2022)
 
 [Zhanghao Sun]\*, [Jian Wang]\*, [Yicheng Wu], [Shree Nayar].
-\* Equal Contributions
+
+<span style="font-size:4em;">\* Equal Contributions<span>
 
 ## [Paper], [Poster], [Video], [Supplementary]
 
