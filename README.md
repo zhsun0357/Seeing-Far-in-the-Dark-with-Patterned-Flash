@@ -3,9 +3,7 @@ Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with
 
 [Zhanghao Sun]\*, [Jian Wang]\*, [Yicheng Wu], [Shree Nayar].
 
-<span style="color:green;font-weight:700;font-size:20px">
-    markdown color font styles
-</span>
+\*These authors contribute equally to the manuscript.
 
 ## [Paper], [Poster], [Video], [Supplementary]
 
