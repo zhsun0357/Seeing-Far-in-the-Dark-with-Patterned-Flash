@@ -8,7 +8,7 @@
   
   , "restore": false
   , "path": {
-    "root": "/media/data1/szh/compare_swinir_kair/" // log directory
+    "root": "/home/szhbchr/compare_swinir_kair/" // log directory
     , "pretrained_netG": null      // path of pretrained model
     , "pretrained_netE": null      // path of pretrained model
     , "restore": null
@@ -18,8 +18,8 @@
     "train": {
       "name": "train_dataset" // name
       , "dataset_type": "pf_data" // "pf_data" or "fnf_data"
-      , "dataroot_H": "/media/data1/szh/FT3D/frames_cleanpass/"// path of training dataset
-      , "pattern_dir": "/media/data1/szh/flash_pattern_calib/2022_0108_5/rast4x_1xdot_nobg_pattern_calib1_rggb_big.npy" // path of pattern directory
+      , "dataroot_H": "/home/szhbchr/FT3D/frames_cleanpass/"// path of training dataset
+      , "pattern_dir": "captured_data/pf_pattern_calib.npy" // path of pattern directory
       , "pattern_boost": 16 // (1/(pattern occupancy))^2, see paper for details
       , "H_size":320
       , "W_size":448
@@ -40,8 +40,8 @@
     , "test": {
       "name": "test_dataset" // name
       , "dataset_type": "pf_data" // "pf_data" or "fnf_data"
-      , "dataroot_H": "/media/data1/szh/FT3D/frames_cleanpass/"  // path of testing dataset
-      , "pattern_dir": "/media/data1/szh/flash_pattern_calib/2022_0108_5/rast4x_1xdot_nobg_pattern_calib1_rggb_big.npy" // path of pattern directory
+      , "dataroot_H": "/home/szhbchr/FT3D/frames_cleanpass/"// path of training dataset
+      , "pattern_dir": "captured_data/pf_pattern_calib.npy" // path of pattern directory
       , "pattern_boost": 16 // (1/(pattern occupancy))^2, see paper for details
       , "H_size":320
       , "W_size":448

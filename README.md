@@ -44,7 +44,7 @@ We provide our pre-trained [checkpoint] of patterned flash reconstruction model.
 
 ### Synthetic Dataset
 We use RGB image (left) and depth map in [FlyingThings3D] dataset for both evaluation and training. 
-We follow the image formation model in data synthesize process, including depth-dependent pattern warping and physics-based noise.
+We follow the image formation model in data synthesize process, including depth-dependent pattern warping and physics-based noise. We also notice that most current flash/no-flash reconstruction algorithms do not handle shadow correctly, since sharp shadow edges in no-flash images usually do not exist in flash images. We consider this effect with the stereo image pair provided by [FlyingThings3D] dataset.
 
 After downloading the [FlyingThings3D] dataset, please organize it as follows (split files are avaiable [here]):
 
@@ -102,7 +102,11 @@ One can run training with:
     
     python main_train_cnn_psnr_pattern_flash.py --opt options/train_pf.json
     
-for patterned flash reconstruction model training
+for patterned flash reconstruction model training or 
+
+    python main_train_cnn_psnr_pattern_flash.py --opt options/train_fnf.json
+        
+for patterned flash/no-flash reconstruction model training
     
 The whole training process has around 200k iters and would take around 36hrs on Nvidia Tesla V100 GPU (16GB).
 You can easily change hyper-parameters and input/output file directories in the json files.

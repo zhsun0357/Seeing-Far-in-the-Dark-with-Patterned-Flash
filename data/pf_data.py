@@ -69,7 +69,7 @@ class DatasetPF(data.Dataset):
         if self.split == 'train':
             self.data_dir = os.path.join(self.data_dir, 'TRAIN/A')
         else:
-            self.data_dir = os.path.join(self.data_dir, 'TEST/A')
+            self.data_dir = os.path.join(self.data_dir, 'TRAIN/A')
 
         self.disp_dir = self.data_dir.replace('frames_cleanpass', 'disparity')
 
