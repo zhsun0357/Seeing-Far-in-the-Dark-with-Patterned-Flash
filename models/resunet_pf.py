@@ -51,7 +51,7 @@ class ResUNet(torch.nn.Module):
     
     def get_pattern_raw(self, X):
         B, C, H, W = X.shape
-        pattern_raw = torch.zeros(B, 1, H*2, W*2).cuda()
+        pattern_raw = torch.zeros(B, 1, H*2, W*2).to(X.device)
         pattern_raw[:,0,::2,::2] = X[:,-4,:,:]
         pattern_raw[:,0,1::2,::2] = X[:,-3,:,:]
         pattern_raw[:,0,1::2,1::2] = X[:,-2,:,:]
@@ -69,7 +69,7 @@ class ResUNet(torch.nn.Module):
         pattern_raw = self.get_pattern_raw(X)
         theta = torch.Tensor([[1, 0, 0], [0, 1, 0]])
         theta = theta.repeat(pattern_raw.size()[0], 1, 1)
-        grid = F.affine_grid(theta, pattern_raw.size()).cuda()
+        grid = F.affine_grid(theta, pattern_raw.size()).to(X.device)
         grid.requires_grad_(requires_grad = False)
         sx = torch.repeat_interleave(torch.repeat_interleave(sx, 2, dim = 1), 2, dim = 2)
         sy = torch.repeat_interleave(torch.repeat_interleave(sy, 2, dim = 1), 2, dim = 2)
