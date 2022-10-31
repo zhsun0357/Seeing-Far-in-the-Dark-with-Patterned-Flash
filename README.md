@@ -102,11 +102,7 @@ One can run training with:
     
     python main_train_cnn_psnr_pattern_flash.py --opt options/train_pf.json
     
-for patterned flash reconstruction model training or 
-
-    python main_train_cnn_psnr_pattern_flash.py --opt options/train_fnf.json
-        
-for patterned flash/no-flash reconstruction model training
+for patterned flash reconstruction model training
     
 The whole training process has around 200k iters and would take around 36hrs on Nvidia Tesla V100 GPU (16GB).
 You can easily change hyper-parameters and input/output file directories in the json files.
