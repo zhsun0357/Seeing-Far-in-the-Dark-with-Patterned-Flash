@@ -37,6 +37,7 @@ class DatasetPF(data.Dataset):
         """
         General params
         """
+        self.data_dir = opt['dataroot_H']
         self.n_channels = opt['n_channels']
         self.min_noise = opt['min_noise']
         self.max_noise = opt['max_noise']
@@ -46,16 +47,16 @@ class DatasetPF(data.Dataset):
         self.min_poiss_K = opt['min_poiss_K']
         self.max_poiss_K = opt['max_poiss_K']
         self.crop_size = (opt['H_size'], opt['W_size'])
-        self.warp_kwargs = {'disp_clip': opt['disp_clip'], 'crop_size': self.crop_size}
         self.split = opt['split']
-        self.data_dir = opt['dataroot_H']
         
         if self.split == 'train':
             with open(os.path.join(self.data_dir, 'train_split.txt'), 'r') as f:
                 self.file_list = f.read().splitlines()
+            self.warp_kwargs = {'disp_clip': opt['disp_clip'], 'crop_size': self.crop_size, 'train': True}
         elif self.split == 'val':
             with open(os.path.join(self.data_dir, 'val_small_split.txt'), 'r') as f:
                 self.file_list = f.read().splitlines()
+            self.warp_kwargs = {'disp_clip': opt['disp_clip'], 'crop_size': self.crop_size, 'train': False}
             """
             a small validation dataset with only 20 data for evaluation during training
             """

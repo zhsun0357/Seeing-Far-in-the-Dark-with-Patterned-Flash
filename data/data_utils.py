@@ -55,17 +55,22 @@ def get_dshift_pattern(pattern_raw, depth, **kwargs):
     """
     dir_type = np.random.randint(4)
     shift_kernels = torch.zeros(1,9,pattern_raw.shape[0], pattern_raw.shape[1])
-    deltax = (1 - 1/depth).astype(np.float32) * np.random.uniform(0.5,kwargs['disp_clip'])
-    deltay = (1 - 1/depth).astype(np.float32) * np.random.uniform(0.5,kwargs['disp_clip'])
+    if kwargs['train']:
+        deltax = (1 - 1/depth).astype(np.float32) * np.random.uniform(0.5,kwargs['disp_clip'])
+        deltay = (1 - 1/depth).astype(np.float32) * np.random.uniform(0.5,kwargs['disp_clip'])
+    else:
+        deltax = (1 - 1/depth).astype(np.float32) * kwargs['disp_clip']
+        deltay = (1 - 1/depth).astype(np.float32) * kwargs['disp_clip']
     assert np.all(deltax >= 0) and np.all(deltax <= kwargs['disp_clip']) \
         and np.all(deltay >= 0) and np.all(deltay <= kwargs['disp_clip'])
-    if dir_type == 1:
-        deltax = -deltax
-    if dir_type == 2:
-        deltay = -deltay
-    if dir_type == 3:
-        deltax = -deltax
-        deltay = -deltay
+    if kwargs['train']:
+        if dir_type == 1:
+            deltax = -deltax
+        if dir_type == 2:
+            deltay = -deltay
+        if dir_type == 3:
+            deltax = -deltax
+            deltay = -deltay
 
     pattern_raw_shift = stn(pattern_raw, deltax, deltay)
     pattern_shift = np.concatenate((pattern_raw_shift[::2,::2, np.newaxis],\
@@ -90,7 +95,7 @@ def get_pattern_raw(pattern):
 def get_simu_eval(pattern_calib, flash, depth, **kwargs):
     depth = np.repeat(np.repeat(depth, 2, axis = 0), 2, axis = 1).astype(np.float32)
 
-    warp_kwargs = {'disp_clip': kwargs['baseline'], 'crop_size': [kwargs['crop_H'],kwargs['crop_W']]}
+    warp_kwargs = {'disp_clip': kwargs['baseline'], 'crop_size': [kwargs['crop_H'],kwargs['crop_W']], 'train': kwargs['train']}
     pattern_raw = get_pattern_raw(pattern_calib).astype(np.float32)
     pattern_real, sx_gt, sy_gt = get_dshift_pattern(pattern_raw, depth, **warp_kwargs)
     
@@ -106,22 +111,19 @@ def get_simu_eval(pattern_calib, flash, depth, **kwargs):
     return img_flash
     
 
-def get_ft3d_fd_eval(data_dir, disp_dir, **kwargs):
+def get_ft3d_fd_eval(**kwargs):
     """
     FT3D dataset has too much high freq details, make resolution lower
     """
-    rgb_file = os.path.join(data_dir, kwargs['fname'])
+    rgb_file = os.path.join('data/ft3d_data', '{}.png'.format(kwargs['fname']))
     rgb = imageio.imread(rgb_file).astype(np.float32)/255.0
     rgb = np.concatenate((rgb, rgb[...,1:2]), axis = 2)
     rgb = rgb[20:(20+kwargs['crop_H']), 20:(20+kwargs['crop_W'])]
     
-    disp, _ = readPFM(os.path.join(disp_dir, kwargs['fname'].replace('png', 'pfm')))
+    disp, _ = readPFM(os.path.join('data/ft3d_data', '{}.pfm'.format(kwargs['fname'])))
     disp = disp[:(kwargs['crop_H']+40), :(kwargs['crop_W']+40)]
     depth = np.clip(1.0/np.asarray(disp) * kwargs['depth_clip']*10, 0.0, kwargs['depth_clip']) 
     depth = (depth - np.min(depth))/(np.max(depth) - np.min(depth))*(kwargs['depth_clip'] - 1) + 1
     
     rgb = rgb/depth[20:-20,20:-20,np.newaxis]**2
-    
-    dbase = np.sqrt(1/kwargs['power'])
-    depth += (dbase/8) - 1
     return rgb, depth
