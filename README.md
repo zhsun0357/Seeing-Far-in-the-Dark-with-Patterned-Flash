@@ -89,10 +89,10 @@ One can run the evaluation script in "eval_patterned_flash.ipynb" for quantitati
 We captured several images with our hardware prototype. One can also run the evaluation script in "eval_patterned_flash.ipynb" for real-world captured data.
 
 #### Example Reconstruction Results
-<img src='figs/results_real.png'>
+<img src='figs/results_real.png' width="900"/>
 
 #### Face detection with Patterned Flash (with [Google MediaPipe])
-<img src='figs/face_det.png'>
+<img src='figs/face_det.png' width="900"/>
 
 [checkpoint]: https://zhsun0357.github.io/
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
