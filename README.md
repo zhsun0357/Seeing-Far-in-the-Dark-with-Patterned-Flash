@@ -26,7 +26,8 @@ This repository is code release for our ECCV 2022 paper "Seeing Far in the Dark 
 Flash illumination is widely used in imaging under low-light environments. However, illumination intensity falls off with propagation distance quadratically, which poses significant challenges for flash imaging at a long distance. We propose a new flash technique, named "patterned flash", for flash imaging at a long distance. Patterned flash concentrates optical power into a dot array. Compared with the conventional uniform flash where the signal is overwhelmed by the noise everywhere, patterned flash provides stronger signals at sparsely distributed points across the field of view to ensure the signals at those points stand out from the sensor noise. This enables post-processing to resolve important objects and details. Additionally, the patterned flash projects texture onto the scene, which can be treated as a structured light system for depth perception. Given the novel system, we develop a joint image reconstruction and depth estimation algorithm with a convolutional neural network. We build a hardware prototype and test the proposed flash technique on various scenes. The experimental results demonstrate that our patterned flash has significantly better performance at long distances in low-light environments. 
 
 For more details of our work, please refer to our technical paper.
-<img src='figs/principle.png', width='100'>
+
+<img src='figs/principle.png' width="200"/>
 
 ## Citation
 If you find our work useful in your research, please consider citing:
