@@ -27,7 +27,7 @@ Flash illumination is widely used in imaging under low-light environments. Howev
 
 For more details of our work, please refer to our technical paper.
 
-<img src='figs/principle.png' width="200"/>
+<img src='figs/principle.png' width="1000"/>
 
 ## Citation
 If you find our work useful in your research, please consider citing:
