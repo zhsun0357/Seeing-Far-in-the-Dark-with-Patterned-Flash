@@ -17,6 +17,7 @@ Code and data release for the ECCV 2022 manuscript "[Seeing Far in the Dark with
 [Video]: https://zhsun0357.github.io/data/2891.mp4
 [Supplementary]: https://jianwang-cmu.github.io/22patternedFlash/patteredFlash-supp.pdf
 
+## 12/26/2022: Updated train scripts for patterned flash and patterned flash/no-flash imaging
 ## 10/30/2022: Updated train and evaluation scripts.
 
 ## Introduction
