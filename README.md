@@ -90,7 +90,7 @@ We captured several images with our hardware prototype. One can also run the eva
 <img src='figs/results_real.png'>
 
 #### Face detection with Patterned Flash (with [Google MediaPipe])
-<img src='face_det/mediapipe_detection/annotated_image_pf_face_det.jpg'>
+<img src='figs/face_det.png'>
 
 [checkpoint]: https://zhsun0357.github.io/
 [FlyingThings3D]: https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html
