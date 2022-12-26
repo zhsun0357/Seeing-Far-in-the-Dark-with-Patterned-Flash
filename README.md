@@ -83,7 +83,7 @@ ROOT
 One can run the evaluation script in "eval_patterned_flash.ipynb" for quantitative and qualitative comparisons.
 
 #### Example Reconstruction Results
-<img src='figs/results_synth.png'>
+<img src='figs/results_synth.png' width="800"/>
 
 ### Real-world Captured Data
 We captured several images with our hardware prototype. One can also run the evaluation script in "eval_patterned_flash.ipynb" for real-world captured data.
