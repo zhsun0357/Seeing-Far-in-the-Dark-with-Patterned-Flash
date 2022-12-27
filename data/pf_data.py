@@ -67,9 +67,9 @@ class DatasetPF(data.Dataset):
         we are only using the A subset in both FlyingThings3D TRAIN and TEST
         """  
         if self.split == 'train':
-            self.data_dir = os.path.join(self.data_dir, 'TRAIN/A')
+            self.data_dir = os.path.join(self.data_dir, 'TRAIN/')
         else:
-            self.data_dir = os.path.join(self.data_dir, 'TRAIN/A')
+            self.data_dir = os.path.join(self.data_dir, 'TRAIN/')
 
         self.disp_dir = self.data_dir.replace('frames_cleanpass', 'disparity')
 
