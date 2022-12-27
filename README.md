@@ -60,7 +60,7 @@ ROOT
 |       +--- val_split.txt                       # validation set split file
 |       +--- val_small_split.txt                 # small validation set split file
 |       |
-|       ---- TRAIN                      # training set
+|       +--- TRAIN                      # training set
 |       |      |
 |       |      ---- A                   # subset
 |       |      |      |
