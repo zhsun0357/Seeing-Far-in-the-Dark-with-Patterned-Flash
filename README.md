@@ -56,9 +56,9 @@ After downloading the [FlyingThings3D] dataset, please organize it as follows (s
 ROOT
 |
 --- frames_cleanpass                    # color image folder
-|       +--- train_split.txt                     # training set split file
-|       +--- val_split.txt                       # validation set split file
-|       +--- val_small_split.txt                 # small validation set split file
+|       +--- train_split.txt            # training set split file
+|       +--- val_split.txt              # validation set split file
+|       +--- val_small_split.txt        # small validation set split file
 |       |
 |       +--- TRAIN                      # training set
 |       |      |
