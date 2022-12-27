@@ -50,7 +50,7 @@ We use RGB image (left) and depth map in [FlyingThings3D] dataset for both evalu
 We follow the image formation model in data synthesize process, including depth-dependent pattern warping and physics-based noise. 
 After downloading the [FlyingThings3D] dataset, please organize it as follows (split files are avaiable [here]):
 
-[here]: https://zhsun0357.github.io/
+[here]: split_files
 
 ```
 ROOT
