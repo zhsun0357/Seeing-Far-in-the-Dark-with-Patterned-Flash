@@ -40,7 +40,7 @@ If you find our work useful in your research, please consider citing:
         }
 
 ## Installation
-We use Python 3.6.7 , Pytorch 1.9 and CUDA 10.2 for our experiments. One can install our conda environment from "environment.yml".
+We use the latest Python 3.9 , Pytorch 1.13 and CUDA 11.6 for our experiments. One can install our conda environment from "environment.yml".
 
 ## Evaluation
 We provide our pre-trained [checkpoint] of patterned flash reconstruction model.
