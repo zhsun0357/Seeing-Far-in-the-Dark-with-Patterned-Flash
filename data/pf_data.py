@@ -21,14 +21,7 @@ torch.set_num_threads(1)
 from data_utils import stn, mod_flash, get_dshift_pattern
 
 class DatasetPF(data.Dataset):
-    """
-    # -----------------------------------------
-    # Get L/H for denosing on AWGN with fixed sigma.
-    # Only dataroot_H is needed.
-    # -----------------------------------------
-    # e.g., DnCNN
-    # -----------------------------------------
-    """
+    
     def __init__(self, opt):
         super(DatasetPF, self).__init__()
         print('Dataset: Denosing on AWGN with fixed sigma. Only dataroot_H is needed.')
@@ -140,15 +133,13 @@ class DatasetPF(data.Dataset):
         band_noise_level = np.random.uniform(self.band_noise*0.5, self.band_noise*1.5)
         noise_level = 10**np.random.uniform(np.log10(self.min_noise), np.log10(self.max_noise))
         poiss_K = 10**np.random.uniform(np.log10(self.min_poiss_K), np.log10(self.max_poiss_K))
-        band_noise1 = np.tile(np.random.normal(size = (flash_crop.shape[0], 1, flash_crop.shape[2]))*band_noise_level, \
-                             (1, flash_crop.shape[1], 1))
-        band_noise2 = np.tile(np.random.normal(size = (flash_crop.shape[0], 1, flash_crop.shape[2]))*band_noise_level, \
+        band_noise = np.tile(np.random.normal(size = (flash_crop.shape[0], 1, flash_crop.shape[2]))*band_noise_level, \
                              (1, flash_crop.shape[1], 1))
         
         pattern = pattern_shift * self.pattern_boost * power
         img_flash_crop = np.copy(flash_crop) * pattern
         sigma_map_flash = np.sqrt(img_flash_crop * poiss_K/4096 + noise_level**2)
-        img_flash_crop += np.random.normal(size = img_flash_crop.shape)*sigma_map_flash + band_noise2
+        img_flash_crop += np.random.normal(size = img_flash_crop.shape)*sigma_map_flash + band_noise
         img_flash_crop = np.clip(img_flash_crop, -1.0, 1.0)
         img_flash_crop = (img_flash_crop * 4096).astype(np.int64).astype(np.float32)/4096
         

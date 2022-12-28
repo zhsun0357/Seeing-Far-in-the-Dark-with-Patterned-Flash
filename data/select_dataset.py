@@ -21,19 +21,9 @@ def define_Dataset(dataset_opt):
     # -----------------------------------------
     # Patterned flash/no-flash reconstruction
     # -----------------------------------------
-    elif dataset_type in ['pattern_fnf_randp_low_poiss_quant_rggb_scale']:
-        from data.dataset_pattern_fnf_randp_low_poiss_quant_rggb_scale import DatasetFnF as D
-    elif dataset_type in ['pattern_fnf_randp_low_poiss_quant_rggb_scale_1']:
-        from data.dataset_pattern_fnf_randp_low_poiss_quant_rggb_scale_1 import DatasetFnF as D
-    elif dataset_type in ['pattern_fnf_randp_low_poiss_quant_rggb_recfnf_scale']:
-        from data.dataset_pattern_fnf_randp_low_poiss_quant_rggb_recfnf_scale import DatasetFnF as D
-    elif dataset_type in ['pattern_fnf_randp_low_poiss_quant_rggb_dloss_scale']:
-        from data.dataset_pattern_fnf_randp_low_poiss_quant_rggb_dloss_scale import DatasetFnF as D
-    elif dataset_type in ['pattern_fnf_randp_low_poiss_quant_rggb_dloss_scale_1']:
-        from data.dataset_pattern_fnf_randp_low_poiss_quant_rggb_dloss_scale_1 import DatasetFnF as D
-    elif dataset_type in ['pattern_nof_randp_low_poiss_quant_rggb_scale_ft3d']:
-        from data.dataset_pattern_nof_randp_low_poiss_quant_rggb_scale_ft3d import DatasetFnF as D
-
+    elif dataset_type in ['fnf_data']:
+        from data.fnf_data import DatasetFnF as D
+    
     # -----------------------------------------
     # common
     # -----------------------------------------

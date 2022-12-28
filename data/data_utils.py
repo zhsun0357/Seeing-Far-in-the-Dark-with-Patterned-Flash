@@ -28,7 +28,7 @@ def mod_flash(H, W):
     amp = (high-low)/2
     mod_pattern = amp * np.sin(2*np.pi/period*( (gridX-x_)**2 + (gridY-y_)**2 )**0.5 ) + low + amp
 
-    return mod_pattern
+    return mod_pattern[..., np.newaxis]
 
 
 def stn(pattern_raw, sx, sy):

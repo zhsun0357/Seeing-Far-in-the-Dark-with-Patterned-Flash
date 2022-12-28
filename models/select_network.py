@@ -22,19 +22,11 @@ def define_G(opt):
     # ----------------------------------------
     # Patterned flash reconstruction
     # ----------------------------------------
-    if net_type == 'ResUNet_pf':
-        from models.resunet_pf import ResUNet
+    if net_type == 'ResUNet':
+        from models.resunet import ResUNet
         netG = ResUNet(opt_net["in_chans"], out_chans = opt_net['out_chans'], \
                              disp_clip = opt_net['disp_clip'])
-        
-    # ----------------------------------------
-    # Patterned flash/noflash reconstruction
-    # ----------------------------------------
-    elif net_type == 'ResUNet_fnf':
-        from models.resunet_fnf import ResUNet
-        netG = ResUNet(opt_net["in_chans"], out_chans = opt_net['out_chans'], \
-                             disp_clip = opt_net['disp_clip'])
-
+    
     # ----------------------------------------
     # others
     # ----------------------------------------

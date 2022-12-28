@@ -103,7 +103,7 @@ class ModelPlain(ModelBase):
             self.G_lossfn = PFLoss_edge_dloss(self.opt_train['lam_vgg'], \
                             self.opt_train['lam_edge'], self.opt_train['lam_recp'], \
                             self.opt_train['lam_dloss'], self.opt_train['pattern_boost']).to(self.device)
-        elif G_lossfn_type == 'pf_edge_dloss_fnf':
+        elif G_lossfn_type == 'fnf_edge_dloss':
             self.G_lossfn = FnFLoss_edge_dloss(self.opt_train['lam_vgg'], \
                             self.opt_train['lam_edge'], self.opt_train['lam_recp'], \
                             self.opt_train['lam_dloss'], self.opt_train['pattern_boost']).to(self.device)
