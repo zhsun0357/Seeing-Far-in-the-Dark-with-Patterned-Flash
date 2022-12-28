@@ -65,8 +65,7 @@ def main(json_path='options/train_msrresnet_psnr.json'):
     ## copy scripts
     if not os.path.exists(os.path.join(opt['path']['log'], 'scripts')):
         os.mkdir(os.path.join(opt['path']['log'], 'scripts'))
-    # pdb.set_trace()
-    os.system("cp -r /home/szh/cnn_models_fad/ {}".format(os.path.join(opt['path']['log'], 'scripts')))
+    os.system("cp -r {} {}".format(os.path.dirname(os.path.realpath(__file__)), os.path.join(opt['path']['log'], 'scripts')))
     
     # ----------------------------------------
     # update opt, automatically restart from the last checkpoint
